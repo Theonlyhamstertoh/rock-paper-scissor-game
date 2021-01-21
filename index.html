@@ -5,17 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPS Game</title>
     <link rel='stylesheet' href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&display=swap" rel="stylesheet">
 </head>
 <body>
     <script src="main.js" defer></script>
-    <input type="button" id ='rock' class='button' value="Rock">
-    <input type="button" id ='paper' class='button' value="Paper">
-    <input type="button" id ='scissor' class='button' value="Scissor">
 
-    <p id="roundOutcome"></p>
-    <p id="numberTracker"></p>
-    <p id="gameOutcome"></p>
-    <input type="button" id = 'playAgain' class='button' value="Play Again">
+    <!-- All image credit belongs to ***Naolito*** on DeviantArt for his amazing artwork.  -->
+   <div class="container">
+       <div class="title">Rock Paper Scissor</div>
+       <div>
+           <p class="roundNumber"></p>   
+           <p id="roundOutcome"></p>
+       </div>
+       <div class="theTrio">
+           <div class="card">
+               <div class="card-image">
+                   <input type="image" class="responsive"  name="rock" id="rock" src="images/SVG/rock.svg" width="230px" height="auto">
+               </div>
+               
+               <div class="card-text">Rock</div>
+           </div>
+           <div class="card">
+               <div class="card-image">
+                   <input type="image" class="responsive" name="paper" id='paper' src="images/SVG/paper.svg" width="200px" id='rock'height="auto">
+               </div>  
+               <div class="card-text">Paper</div>
+           </div>
+           <div class="card">
+               <div class="card-image"><input type="image" id="scissor" src="images/SVG/Scissor.svg" class="responsive" width="180px" height="auto">  </div>
+               <div class="card-text">Scissor</div>
+           </div>
+        </div>
+        <div class="scores">
+            <p></p>
+            <div class="scoreCard">
+                <p>Player</p>
+                <p id="playerScore"></p>
+            </div>
+            <div class="scoreCard">
+                <p>Computer</p>
+                <p id="computerScore"></p>
+            </div>
+        </div>
+        <div class="outcome">
+            <p id="gameOutcome"></p>
+            <input type="button" id = 'playAgain' class='button' value="Play Again">
+        </div>
+        
+   </div>
+   
+  
+
+
+ 
+
+    
 </body>
 </html>
 

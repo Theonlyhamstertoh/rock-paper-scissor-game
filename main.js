@@ -1,16 +1,13 @@
-// the main objective is to allow user to pick rock paper or scissor and the computer randomly chooses one to the best of 5. 
-// There should be a function that reads which rock or paper or scissor user chose through the button pressed
-// the program then should compare to the computer randomly generated
-// if... then....if....else for ROCK > Scissor
-// the game should reset after each round
-// there should be a i++ which increases everytime
-//You will want a array of string which using the ...length variable to use to to randomly pick one and return it to the main function.
-//there should be output that says "You won" "you lost"
-// there should be a score tracker to keep track tally points depending on who won
-// if user won all game or lost all the rounds, stop the game and have a "play again"
-// html should have three buttons, rock paper scissor, computer and user, a a score tracker under their names, 
-
-/* We will break everything into small steps instead of tackling the biggest one first. We will do the smallest.*/
+// allow a more complex rock paper scissor game
+// more randomizing 
+// give supersayen power to the images
+// make rock shake
+// give button animation
+// get rid of image borde
+// make images scalable
+// disappearing" You win you lose " message
+// Allow to see computer choice
+// have heart animations to do remaining lives
 
 let computerScore = 0;
 let playerScore = 0;
@@ -24,6 +21,11 @@ const roundOutcome= document.getElementById('roundOutcome');
 const gameOutcome = document.getElementById('gameOutcome');
 const playAgain = document.getElementById('playAgain');
 const numberTracker = document.getElementById('numberTracker');
+
+const playerPoints = document.getElementById('playerScore');
+const computerPoints = document.getElementById('computerScore');
+const roundValue = document.querySelector('.roundNumber');
+
 const userInput = document.getElementById('userInput');
 let userChoice;
 
@@ -71,27 +73,27 @@ function playRound(playerSelection, computerSelection) {
         roundOutcome.textContent = 'Tied Game!';
         console.log(1);
     } else if(playerSelection === "rock" && computerSelection ==="paper") {
-        roundOutcome.textContent = 'You Lost!';
+        roundOutcome.textContent = 'You Lost The Round!';
         console.log(2);
         computerScore++;
     } else if(playerSelection === "rock" && computerSelection ==="scissor") {
-        roundOutcome.textContent = 'You Won!';
+        roundOutcome.textContent = 'You Won The Round!';
         playerScore++;
         console.log(3);
     } else if(playerSelection === "paper" && computerSelection ==="rock") {
-        roundOutcome.textContent = 'You Won!';
+        roundOutcome.textContent = 'You Won The Round!';
         playerScore++;
         console.log(4);
     } else if(playerSelection === "paper" && computerSelection ==="scissor") {
-        roundOutcome.textContent = 'You Lost!';
+        roundOutcome.textContent = 'You Lost The Round!';
         computerScore++;
         console.log(5);
     } else if(playerSelection === "scissor" && computerSelection ==="paper") {
-        roundOutcome.textContent = 'You Won!' ;
+        roundOutcome.textContent = 'You Won The Round!' ;
         playerScore++;
         console.log(6);
     } else if(playerSelection === "scissor" && computerSelection ==="rock") {
-        roundOutcome.textContent ='You Lost!';
+        roundOutcome.textContent ='You Lost The Round!';
         computerScore++;
         console.log(7);
     } 
@@ -101,7 +103,10 @@ function playRound(playerSelection, computerSelection) {
 // tracks the current round and the points
 function roundTracker() {
     roundNum++;
-    numberTracker.textContent = `Round ${roundNum}, playerscore: ${playerScore}, computerScore: ${computerScore}`;
+    roundValue.textContent = `Round ${roundNum}`;
+    playerPoints.textContent = playerScore;
+    computerPoints.textContent = computerScore;
+
         
     if(playerScore === 5 || computerScore === 5) {
         gameOver();
@@ -140,7 +145,11 @@ function restartGame() {
     //clear paragraph
     gameOutcome.textContent = '';
     roundOutcome.textContent = '';
-    numberTracker.textContent = '';
+    playerPoints.textContent = '';
+    computerPoints.textContent= '';
+    playAgain.style.visibility = 'hidden';
+    roundValue.textContent = ``;
+   
     
 
 }

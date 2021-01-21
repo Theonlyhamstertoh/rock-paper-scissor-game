@@ -1,3 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FCDE78;
+}
+
+
 #playAgain {
     visibility: hidden;
 }
+
+.container {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.title {
+    font-size: 3em;
+    font-weight: 400;
+    font-family: 'Averia Serif Libre', cursive;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+.roundNumber {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+#roundOutcome {
+    text-align: center;
+}
+
+.theTrio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.card-image {
+    margin-bottom: 5px;
+}
+
+
+.card-text {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.responsive {
+    outline: none;
+    width: 100px;
+    max-width: 400px;
+    height: 100px;
+}
+
+.scores {
+    display: flex;
+    justify-content: center;
+}
+
+.scoreCard {
+    font-size: 1.2em;
+    text-align: center;
+    margin: 30px;
+}
+
+.outcome {
+    text-align: center;
+}
+
+.button {
+    margin: 5px;
+    padding: 10px;
+    background-color:rgb(240, 197, 8) ;
+    border: none;
+}
+
