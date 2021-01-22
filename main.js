@@ -8,6 +8,7 @@
 // disappearing" You win you lose " message
 // Allow to see computer choice
 // have heart animations to do remaining lives
+// do a story animation before hand
 
 let computerScore = 0;
 let playerScore = 0;
@@ -142,6 +143,7 @@ function restartGame() {
     rock.disabled = false;
     scissor.disabled = false;
 
+    
     //clear paragraph
     gameOutcome.textContent = '';
     roundOutcome.textContent = '';
@@ -153,3 +155,5 @@ function restartGame() {
     
 
 }
+
+

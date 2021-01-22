@@ -13,31 +13,35 @@
     <!-- All image credit belongs to ***Naolito*** on DeviantArt for his amazing artwork.  -->
    <div class="container">
        <div class="title">Rock Paper Scissor</div>
-       <div>
-           <p class="roundNumber"></p>   
-           <p id="roundOutcome"></p>
-       </div>
+      
        <div class="theTrio">
            <div class="card">
                <div class="card-image">
                    <input type="image" class="responsive"  name="rock" id="rock" src="images/SVG/rock.svg" width="230px" height="auto">
                </div>
-               
-               <div class="card-text">Rock</div>
+               <p class="card-text">Rock</p>
            </div>
            <div class="card">
                <div class="card-image">
                    <input type="image" class="responsive" name="paper" id='paper' src="images/SVG/paper.svg" width="200px" id='rock'height="auto">
                </div>  
-               <div class="card-text">Paper</div>
+               <p class="card-text">Paper</p>
            </div>
            <div class="card">
-               <div class="card-image"><input type="image" id="scissor" src="images/SVG/Scissor.svg" class="responsive" width="180px" height="auto">  </div>
-               <div class="card-text">Scissor</div>
+               <div class="card-image">
+                   <input type="image" id="scissor" src="images/SVG/Scissor.svg" class="responsive" >  
+                </div>
+               <p class="card-text">Scissor</p>
            </div>
         </div>
+        <div class="outcome">
+            <p class="roundNumber"></p>   
+            <p id="roundOutcome"></p>
+            <p id="gameOutcome"></p>
+            <input type="button" id = 'playAgain' class='button' value="Play Again">
+        </div>
+
         <div class="scores">
-            <p></p>
             <div class="scoreCard">
                 <p>Player</p>
                 <p id="playerScore"></p>
@@ -47,19 +51,14 @@
                 <p id="computerScore"></p>
             </div>
         </div>
-        <div class="outcome">
-            <p id="gameOutcome"></p>
-            <input type="button" id = 'playAgain' class='button' value="Play Again">
+        <div>
+            
         </div>
+        
         
    </div>
    
   
-
-
- 
-
-    
 </body>
 </html>
 
