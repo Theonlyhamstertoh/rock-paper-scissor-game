@@ -11,6 +11,7 @@ Learning:
 
 The images in this personal project all belongs to ***Naolito***. He does some really fantastic and creative artwork that you should definitely check out. You can find him here:
 
-www.naolito.com
-https://www.instagram.com/naolitoons/
-https://www.deviantart.com/naolito
+- www.naolito.com
+- https://www.instagram.com/naolitoons/
+- https://www.deviantart.com/naolito
+
